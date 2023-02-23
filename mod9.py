@@ -1,17 +1,20 @@
-def reverse_args(func):
-        def wrapper(*args, **kwargs):
-            args = [i for i in args][::-1]
-            # args.reverse()
-            res = func(*args, **kwargs)
-            return res
-        return wrapper
+#next commit
 
 
-@reverse_args
-def operation(a, b):
-    return a // b
+# def reverse_args(func):
+#         def wrapper(*args, **kwargs):
+#             args = [i for i in args][::-1]
+#             # args.reverse()
+#             res = func(*args, **kwargs)
+#             return res
+#         return wrapper
+
+
+# @reverse_args
+# def operation(a, b):
+#     return a // b
     
-print(operation(90, 0))
+# print(operation(90, 0))
 
 
 
