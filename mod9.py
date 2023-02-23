@@ -1,11 +1,29 @@
-def exception_decorator(func):
+def takes_positive(func):
     def wrapper(*args, **kwargs):
-        try:
-            res = func(*args, **kwargs)
-            return (res, 'Функция выполнилась без ошибок')
-        except:
-            return (None, 'При вызове функции произошла ошибка')
+        for i in args:
+            if i <= 0:
+                raise ValueError
+            elif type(i) != int:
+                raise TypeError
+        for k, v in kwargs.items():
+            if v <= 0:
+                raise ValueError
+            elif type(v) != int:
+                raise TypeError
+        return func(*args, **kwargs)
     return wrapper
+
+
+
+
+# def exception_decorator(func):
+#     def wrapper(*args, **kwargs):
+#         try:
+#             res = func(*args, **kwargs)
+#             return (res, 'Функция выполнилась без ошибок')
+#         except:
+#             return (None, 'При вызове функции произошла ошибка')
+#     return wrapper
 
 # def reverse_args(func):
 #         def wrapper(*args, **kwargs):
