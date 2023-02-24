@@ -1,17 +1,58 @@
-def takes_positive(func):
-    def wrapper(*args, **kwargs):
-        for i in args:
-            if i <= 0:
-                raise ValueError
-            elif type(i) != int:
-                raise TypeError
-        for k, v in kwargs.items():
-            if v <= 0:
-                raise ValueError
-            elif type(v) != int:
-                raise TypeError
-        return func(*args, **kwargs)
-    return wrapper
+import functools
+
+
+
+
+
+
+
+# def trace(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         print(f'TRACE: вызов {(func.__name__)}() с аргументами: {args}, {kwargs}')
+#         res = func(*args, **kwargs)
+#         if type(res) == str:
+#             print(f"TRACE: возвращаемое значение {(func.__name__)}(): '{res}'")
+#         else:
+#             print(f"TRACE: возвращаемое значение {(func.__name__)}(): {res}")
+#         return res
+#     return wrapper
+
+
+
+# def returns_string(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         if type(func(*args, **kwargs)) == str:
+#             return func(*args, **kwargs)
+#         else:
+#             raise TypeError
+#     return wrapper
+
+
+
+# def square(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         return func(*args, **kwargs)**2
+#     return wrapper
+        
+
+
+# def takes_positive(func):
+#     def wrapper(*args, **kwargs):
+#         for i in args:
+#             if i <= 0:
+#                 raise ValueError
+#             elif type(i) != int:
+#                 raise TypeError
+#         for k, v in kwargs.items():
+#             if v <= 0:
+#                 raise ValueError
+#             elif type(v) != int:
+#                 raise TypeError
+#         return func(*args, **kwargs)
+#     return wrapper
 
 
 
