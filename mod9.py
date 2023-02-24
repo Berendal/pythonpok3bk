@@ -1,8 +1,123 @@
-import functools
+# import functools
+
+
+# class MaxRetriesException(Exception):
+#     pass
+
+# def retry(times):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for _ in range(times):
+#                 try:
+#                     return func(*args, **kwargs)
+#                 except:
+#                     pass
+#             raise MaxRetriesException
+#         return wrapper
+#     return decorator
 
 
 
 
+# def ignore_exception(*errors):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             try:
+#                 return func(*args, **kwargs)
+#             except errors as e:
+#                     print(f'Исключение {e.__class__.__name__} обработано')
+#         return wrapper
+#     return decorator
+
+
+
+# def add_attrs(**attr):
+#     def decorator(func):
+#         for k, v in attr.items():
+#             func.__dict__[k] = v
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return decorator
+
+
+
+# def takes(*types):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in (*args, *kwargs.values()):
+#                 if type(i) not in types:
+#                     raise TypeError
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return decorator
+
+
+
+
+# def returns(datatype):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             val = func(*args, **kwargs)
+#             if type(val) != datatype:
+#                 raise TypeError
+#             return val                
+#         return wrapper
+#     return decorator
+
+
+
+# def strip_range(start, end, char='.'):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             val = func(*args, **kwargs)
+#             if end > len(val):
+#                 val = val[:start] + char * (len(val) - start)
+#             else:
+#                 val = val[:start] + char * (end - start) + val[end:]
+#             return val
+#         return wrapper
+#     return decorator
+
+
+
+# def repeat(times):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in range(1, times + 1):
+#                 val = func(*args, **kwargs)
+#             return val
+#         return wrapper
+#     return decorator
+
+
+
+# def make_html(tag):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             return f'<{tag}>{func(*args, **kwargs)}</{tag}>'
+#         return wrapper
+#     return decorator
+
+
+
+# def prefix(string: str, to_the_end: bool=False):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             if to_the_end:
+#                 return func(*args, **kwargs) + string
+#             return string + func(*args, **kwargs)
+#         return wrapper
+#     return decorator
 
 
 
