@@ -1,5 +1,30 @@
-# import functools
+# from functools import lru_cache
 
+
+# @lru_cache()
+# def ways(n):
+#     if n <= 3:
+#         return 1
+#     elif n == 4:
+#         return 2
+#     else:
+#         return ways(n - 1) + ways(n - 3) + ways(n - 4)
+
+
+
+
+# from functools import lru_cache
+# from sys import stdin
+
+# @lru_cache(typed=False)
+# def alph(w):
+#     return ''.join(sorted(w))
+
+# words = [w.strip() for w in stdin]
+# for w in words:
+#     print(alph(w))
+
+    
 
 # class MaxRetriesException(Exception):
 #     pass
