@@ -1,3 +1,91 @@
+# def flatten(nested_list):
+#     for i in nested_list:
+#         if type(i) == list:
+#             yield from flatten(i)
+#         else:
+#             yield i
+
+
+# def palindromes():
+#     yield from (i for i in range(1, 9999999) if str(i) == str(i)[::-1])
+
+
+
+# def matrix_by_elem(matrix):
+#     for row in matrix:
+#         yield from row
+
+
+
+# def card_deck(suit):
+#     card_values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "валет", "дама", "король", "туз"]
+#     card_suits = ["пик", "треф", "бубен", "червей"]
+#     card_suits.remove(suit)
+#     while True:
+#         for i in card_suits:
+#             for j in (card_values):
+#                 yield f'{j} {i}'
+
+
+
+# from datetime import date, timedelta
+
+# def dates(start, count=None):
+#     try:
+#         if count is None:
+#             count = 0
+#             while True:
+#                 yield start + timedelta(count)
+#                 count += 1
+#         else:
+#             for i in range(count):
+#                 yield start + timedelta(i)
+#     except OverflowError:
+#         StopIteration
+
+
+
+
+# def reverse(sequence):
+#     for i in sequence[::-1]:
+#         yield i
+
+
+
+# def primes(left, right):
+#     for i in range(left, right + 1):
+#         count = 0
+#         for j in range(1, i + 1):
+#             if i % j == 0:
+#                 count += 1
+#         if count == 2:
+#             yield i
+
+
+
+# def alternating_sequence(count=None):
+#     if count is None:
+#         count = 1
+#         while True:
+#             yield - count if count % 2 == 0 else count
+#             count += 1
+#     else:
+#         for i in range(1, count + 1):
+#             yield - i if i % 2 == 0 else i
+    
+
+
+
+# def simple_sequence():
+#     number = 1
+#     while True:
+#         for _ in range(number):
+#             yield number
+#         number += 1
+
+
+
+
 # class Xrange:
 #     def __init__(self, start, end, step=1):
 #         self.start = start - step
