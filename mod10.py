@@ -1,3 +1,41 @@
+# def interleave(*args):
+#     return (i for j in zip(*args) for i in j)
+
+
+# def all_together(*args):
+#     return (i for j in args for i in j)
+
+
+# def count_iterable(iterable):
+#     gen = (i for i in iterable)
+#     count = 0
+#     for _ in gen:
+#         count += 1
+#     return count
+
+
+
+# def is_prime(number):
+#     return False if number == 1 else all(number % n for n in range(2, number))
+
+
+# def is_prime(number):
+#     if number == 1:
+#         return False
+#     else:
+#         gen = (i for i in range(2, number) if number % i == 0)
+#         try:
+#             next(gen)
+#             return False
+#         except:
+#             return True
+
+
+# def cubes_of_odds(iterable):
+#     return (num ** 3 for num in iterable if num % 2)
+
+
+
 # def flatten(nested_list):
 #     for i in nested_list:
 #         if type(i) == list:
