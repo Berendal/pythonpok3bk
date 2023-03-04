@@ -1,3 +1,107 @@
+def txt_to_dict():
+    with open('planets.txt', 'r', encoding='utf-8') as f:
+        l = (i.split('\n') for i in f.read().split('\n\n'))
+        m = tuple(j.split('=') for j in l for i in l)
+        print(m)
+
+planets = txt_to_dict()
+
+print(next(planets))
+
+
+
+
+
+# def nonempty_lines(file):
+#     with open(file, 'r', encoding='utf-8') as f:
+#         for line in f.readlines():
+#             l = (i if len(i) <= 25 else '...' for i in line.split() if not i.isspace())
+#             yield from l
+
+
+# from datetime import date, timedelta
+
+
+# def years_days(year):
+#     d = date(year, 1, 1)
+#     while d.year == year:
+#         yield d
+#         d += timedelta(days=1)
+
+
+
+# from datetime import date, timedelta
+
+# def dates(start, count=None):
+#     try:
+#         if count is None:
+#             count = 0
+#             while True:
+#                 yield start + timedelta(count)
+#                 count += 1
+#         else:
+#             for i in range(count):
+#                 yield start + timedelta(i)
+#     except OverflowError:
+#         StopIteration
+
+
+
+
+# with open('data.csv', 'r', encoding='utf-8') as f:
+#     file_lines = (line for line in f)
+#     line_values = (line.rstrip().split(',') for line in file_lines)
+#     file_headers = next(line_values)
+#     line_dicts = (dict(zip(file_headers, data)) for data in line_values)
+#     res = (i['raisedAmt'] for i in line_dicts if i['round'] == 'a')
+#     a = []
+#     for i in res:
+#         a.append(int(i))
+#     print(sum(a))
+
+
+
+
+# def filter_names(names, ignore_char, max_names):
+#     gen = (i for i in names if i[0] != ignore_char.upper() and i.isalpha())
+#     gen2 = (i for _, i in zip(range(max_names), gen))
+#     yield from gen2
+    
+
+
+
+# def parse_ranges(ranges):
+#     rang = (i.split('-') for i in ranges.split(','))
+#     rang1 = (range(int(i[0]), int(i[1]) + 1) for i in rang)
+#     return (i for j in rang1 for i in j)
+        
+
+# from collections import namedtuple
+
+# Person = namedtuple('Person', ['name', 'nationality', 'sex', 'birth', 'death'])
+
+# persons = [Person('E. M. Ashe', 'American', 'male', 1867, 1941),
+#            Person('Goran Aslin', 'Swedish', 'male', 1980, 0),
+#            Person('Erik Gunnar Asplund', 'Swedish', 'male', 1885, 1940),
+#            Person('Genevieve Asse', 'French', 'female', 1949, 0),
+#            Person('Irene Adler', 'Swedish', 'female', 2005, 0),
+#            Person('Sergio Asti', 'Italian', 'male', 1926, 0),
+#            Person('Olof Backman', 'Swedish', 'male', 1999, 0),
+#            Person('Alyson Hannigan', 'Swedish', 'female', 1940, 1987),
+#            Person('Dana Atchley', 'American', 'female', 1941, 2000),
+#            Person('Monika Andersson', 'Swedish', 'female', 1957, 0),
+#            Person('Shura_Stone', 'Russian', 'male', 2000, 0),
+#            Person('Jon Bale', 'Swedish', 'male', 2000, 0)]
+
+# swed = (i for i in persons if i.nationality == 'Swedish')
+# swedalive = (i for i in swed if i.death == 0)
+# swedm = (i for i in swedalive if i.sex == 'male')
+# res = []
+# for i in sorted(swedm, key=lambda x: x[3], reverse=True):
+#     res.append(i.name)
+# print(res[0])
+
+
 # def interleave(*args):
 #     return (i for j in zip(*args) for i in j)
 
