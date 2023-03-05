@@ -1,12 +1,53 @@
-def txt_to_dict():
-    with open('planets.txt', 'r', encoding='utf-8') as f:
-        l = (i.split('\n') for i in f.read().split('\n\n'))
-        m = tuple(j.split('=') for j in l for i in l)
-        print(m)
+# def around(iterable):
+#     data = [i for i in iterable]
+#     a = [None] + data[:-1], data, data[1:] + [None]
+#     yield from list(zip(*a))
 
-planets = txt_to_dict()
 
-print(next(planets))
+
+# def pairwise(iterable):
+#     data = [i for i in iterable]
+#     a = data, data[1:] + [None]
+#     yield from list(zip(*a))
+
+
+
+# def with_previous(iterable):
+#     data = [i for i in iterable]
+#     a = data, [None] + data[:-1]
+#     yield from list(zip(*a))
+
+
+
+
+# def stop_on(iterable, obj):
+#     for i in iterable:
+#         if i == obj:
+#             break
+#         yield i
+
+
+
+# from collections import Counter
+
+
+# def unique(iterable):
+#     yield from Counter(iterable)
+
+
+
+
+# def txt_to_dict():
+#     with open('planets.txt', 'r', encoding='utf-8') as f:
+#         l = (i.split('\n') for i in f.read().split('\n\n'))
+#         m = (i.split('=') for j in l for i in j)
+#         d = {}
+#         for _ in range(5):
+#             for i in m:
+#                 d.setdefault(i[0].strip(), i[1].strip())
+#                 if len(d) == 4:
+#                     yield d
+#                     d = {}
 
 
 
