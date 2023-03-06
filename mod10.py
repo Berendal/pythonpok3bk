@@ -1,8 +1,135 @@
+# from itertools import zip_longest, repeat
+
+
+# def grouper(iterable, n):
+#     a = iter(iterable)
+#     return zip_longest(*repeat(a, n))
+        
+
+
+# from itertools import chain, tee
+
+
+# def ncycles(iterable, times):
+#     for i in tee(chain(iterable), times):
+#         yield from i
+
+
+# from itertools import pairwise
+
+
+# def max_pair(iterable):
+#     return max(a + b for a, b in pairwise(iterable))
+
+
+# def is_rising(iterable):
+#     return (all(a < b for a, b in pairwise(iterable)))
+
+
+
+# from itertools import chain
+
+
+# def sum_of_digits(iterable):
+#     return sum(int(i) for i in chain.from_iterable(map(str, iterable)))
+
+# def sum_of_digits(iterable):
+#     res = []
+#     for i in chain.from_iterable(map(str, iterable)):
+#         res.append(int(i))
+#     return sum(res)
+
+# print(sum_of_digits([123456789]))
+
+
+
+# from itertools import dropwhile
+
+
+# def first_largest(iterable, number):
+#     data = [i for i in iterable]
+#     res = []
+#     for i in dropwhile(lambda x: x <= number, data):
+#         res.append(i)
+#     try:
+#         return data.index(res[0])
+#     except IndexError:
+#         return -1
+
+
+# from itertools import islice
+
+
+# def take_nth(iterable, n):
+#     for i in islice(iterable, n - 1, n):
+#         return i
+
+
+# from itertools import islice
+
+
+# def take(iterable, n):
+#     yield from islice(iterable, n)
+
+
+# def first_true(iterable, predicate):
+#     for i in filter(predicate, iterable):
+#         return i
+
+
+# from itertools import dropwhile
+
+
+# def drop_this(iterable, obj):
+#     yield from dropwhile(lambda n: n == obj, iterable)
+
+
+
+# from itertools import dropwhile
+
+
+# def drop_while_negative(iterable):
+#     yield from dropwhile(lambda it: it < 0, iterable)
+
+
+
+# def roundrobin(*args):
+#     yield from (i for arg in it.zip_longest(*args, fillvalue='*') for i in arg if i != '*')
+    # data = it.zip_longest(*args, fillvalue='*')
+    # res = []
+    # for i in data:
+    #     for j in i:
+    #         if j != '*':
+    #             res.append(j)
+    # return iter(res)
+
+
+# import string
+
+
+# letters = string.ascii_uppercase
+# def alnum_sequence():
+#     generator = (char for obj in zip(it.count(1), letters) for char in obj)
+#     cycle = it.cycle(generator)
+#     yield from cycle
+
+
+
+# import operator
+
+
+# def factorials(n):
+#     yield from it.accumulate(range(1, n + 1), operator.mul)
+
+
+# def tabulate(func):
+#     yield from map(func, it.count(1))
+
+
 # def around(iterable):
 #     data = [i for i in iterable]
 #     a = [None] + data[:-1], data, data[1:] + [None]
 #     yield from list(zip(*a))
-
 
 
 # def pairwise(iterable):
@@ -11,13 +138,10 @@
 #     yield from list(zip(*a))
 
 
-
 # def with_previous(iterable):
 #     data = [i for i in iterable]
 #     a = data, [None] + data[:-1]
 #     yield from list(zip(*a))
-
-
 
 
 # def stop_on(iterable, obj):
