@@ -1,3 +1,103 @@
+
+
+
+
+# from itertools import groupby
+
+
+# def ranges(numbers):
+#     gi = groupby(sorted(enumerate(numbers), key=lambda x: x[1] - x[0]), key=lambda x: x[1] - x[0])
+#     res = []
+#     a = []
+#     b = []
+#     min_r = []
+#     max_r = []
+#     for k, v in gi:
+        # res.append(list(v))
+    # for i in res:
+    #     a.append(min(i))
+    #     b.append(max(i))
+    # for i in a:
+    #     min_r.append(i[1])
+    # for i in b:
+    #     max_r.append(i[1])
+    # return [*zip(min_r, max_r)]
+
+
+# def group_anagrams(words):
+#     gi = groupby(sorted(words, key=sorted), key=sorted)
+#     for k, v in gi:
+#         yield (tuple(v))
+
+
+# tasks = [('Отдых', 'поспать днем', 3),
+#         ('Ответы на вопросы', 'ответить на вопросы в дискорде', 1),
+#         ('ЕГЭ Математика', 'доделать курс по параметрам', 1),
+#         ('Ответы на вопросы', 'ответить на вопросы в курсах', 2),
+#         ('Отдых', 'погулять вечером', 4),
+#         ('Курс по ооп', 'обсудить темы', 1),
+#         ('Урок по groupby', 'добавить задачи на программирование', 3),
+#         ('Урок по groupby', 'написать конспект', 1),
+#         ('Отдых', 'погулять днем', 2),
+#         ('Урок по groupby', 'добавить тестовые задачи', 2),
+#         ('Уборка', 'убраться в ванной', 2),
+#         ('Уборка', 'убраться в комнате', 1),
+#         ('Уборка', 'убраться на кухне', 3),
+#         ('Отдых', 'погулять утром', 1),
+#         ('Курс по ооп', 'обсудить задачи', 2)]
+
+# gi = groupby(sorted(tasks, key=lambda x: x[0]), key=lambda x: x[0])
+# for k, v in gi:
+#     print(f'{k}:')
+#     for i in sorted(v, key=lambda x: x[2]):
+#         print(f'    {i[2]}. {i[1]}')
+#     print()
+
+
+
+# n = 'hello beegeek stepik python'.split()
+# gi = groupby(sorted(n, key=len), key=len)
+# for k, v in gi:
+#     print(f'{k} -> {", ".join(i for i in sorted(v))}')
+
+
+# from collections import namedtuple
+# from itertools import groupby
+
+# Student = namedtuple('Student', ['surname', 'name', 'grade'])
+
+# students = [Student('Гагиев', 'Александр', 10), Student('Дедегкаев', 'Илья', 11), Student('Кодзаев', 'Георгий', 10),
+#             Student('Набокова', 'Алиса', 11), Student('Кораев', 'Артур', 10), Student('Шилин', 'Александр', 11),
+#             Student('Уртаева', 'Илина', 11), Student('Салбиев', 'Максим', 10), Student('Капустин', 'Илья', 11),
+#             Student('Гудцев', 'Таймураз', 11), Student('Перчиков', 'Максим', 10), Student('Чен', 'Илья', 11),
+#             Student('Елькина', 'Мария', 11),Student('Макоев', 'Руслан', 11), Student('Албегов', 'Хетаг', 11),
+#             Student('Щербак', 'Илья', 10), Student('Идрисов', 'Баграт', 11), Student('Гапбаев', 'Герман', 10),
+#             Student('Цивинская', 'Анна', 10), Student('Туткевич', 'Юрий', 11), Student('Мусиков', 'Андраник', 11),
+#             Student('Гадзиев', 'Георгий', 11), Student('Белов', 'Юрий', 11), Student('Акоева', 'Диана', 11),
+#             Student('Денисов', 'Илья', 11), Student('Букулова', 'Диана', 10), Student('Акоева', 'Лера', 11)]
+
+
+# gi = groupby(sorted(students, key=lambda x: x[1]))
+# res = [i for i in max(gi)]
+# print(res[0].name)
+
+
+# from collections import namedtuple
+# from itertools import groupby
+
+# Person = namedtuple('Person', ['name', 'age', 'height'])
+
+# persons = [Person('Tim', 63, 193), Person('Eva', 47, 158),
+#            Person('Mark', 71, 172), Person('Alex', 45, 193),
+#            Person('Jeff', 63, 193), Person('Ryan', 41, 184),
+#            Person('Ariana', 28, 158), Person('Liam', 69, 193)]
+
+# gi = groupby(sorted(persons, key=lambda x: x[2]), key=lambda x: x[2])
+
+# for k, v in gi:
+#     print(f'{k}: {", ".join(str(i.name) for i in sorted(v))}')
+
+
 # from itertools import zip_longest, repeat
 
 
