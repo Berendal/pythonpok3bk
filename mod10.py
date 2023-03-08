@@ -1,5 +1,88 @@
+# from itertools import product, chain
+# from string import digits, ascii_uppercase
+
+# n, m = int(input()), int(input())
+
+# lst = list(chain(map(str, digits), ascii_uppercase))
+
+# for i in product(lst[:n], repeat=m):
+#     print(*i, sep='', end=' ')
 
 
+# def password_gen():
+#     for i in product(range(10), repeat=3):
+#         yield str(i[0]) + str(i[1]) + str(i[2])
+
+
+# from string import ascii_lowercase
+# from itertools import product
+
+# letters = ascii_lowercase[:8]
+# digits = [1, 2, 3, 4, 5, 6, 7, 8]
+
+# for i in product(letters, digits):
+#     print(*i, sep='', end=' ')
+
+
+
+
+# from collections import namedtuple
+# import itertools
+
+# Item = namedtuple('Item', ['name', 'mass', 'price'])
+
+# items = [Item('Обручальное кольцо', 7, 49_000),
+#          Item('Мобильный телефон', 200, 110_000),
+#          Item('Ноутбук', 2000, 150_000),
+#          Item('Ручка Паркер', 20, 37_000),
+#          Item('Статуэтка Оскар', 4000, 28_000),
+#          Item('Наушники', 150, 11_000),
+#          Item('Гитара', 1500, 32_000),
+#          Item('Золотая монета', 8, 140_000),
+#          Item('Фотоаппарат', 720, 79_000),
+#          Item('Лимитированные кроссовки', 300, 80_000)]
+
+
+# weight = int(input())
+# try:
+#     goods = (max(filter(lambda x: sum(list(zip(*x))[1]) <= weight, (v for r in range(1, len(items) + 1) for v in itertools.combinations(filter(lambda x: x[1] <= weight, items), r))), key=lambda x: sum(list(zip(*x))[2])))
+#     for i in sorted(goods):
+#         print(i[0])
+# except:
+#     print('Рюкзак собрать не удастся')
+
+
+# from itertools import combinations_with_replacement
+
+
+# wallet = [100, 50, 20, 10, 5]
+
+# count = 0
+# for i in range(21):
+#     for j in set(combinations_with_replacement(wallet, i)):
+#         if sum(j) == 100:
+#             count += 1
+# print(count)
+
+
+# from itertools import combinations
+
+
+# wallet = [100, 100, 50, 50, 50, 50, 20, 20, 20, 10, 10, 10, 10, 10, 5, 5, 1, 1, 1, 1, 1]
+
+# count = 0
+# for i in range(len(wallet)):
+#     for j in set(combinations(wallet, i)):
+#         if sum(j) == 100:
+#             count += 1
+# print(count)   
+
+
+# from itertools import permutations
+
+
+# for i in sorted(set(permutations(input()))):
+#     print(*i, sep='')
 
 
 # from itertools import groupby
