@@ -1,4 +1,29 @@
+# regex = r'\b(\w+)\s+\1\b'
+# regex = r'\d{2}((-|---|\.)?)(\d{2}\1){2}\d{2}'
+# regex = r'\d{2}(-?)(\d{2}\1){2}\d{2}'
+# regex = r'\b\w*(\w)\w*\1{1,}\w*\b'
+# regex = r'(.)(.)(.)(.).\4\3\2\1'
+# regex = r'(ok){3,}'
+# regex = r'([a-z])([0-9]|\w)([A-Z])\1\2\3'
+# regex = r'((bee)(geek){1,}){1,}'
+# regex = r'(\([2-9]\d{2}\)|[2-9]\d{2})[\s-][2-9]\d{2}-\d{4}'
+# regex = r'\d{5}(-\d{4})?'
 
+# regex = r'^[0-9]{1,2}[a-zA-Z]{3,}\.{,3}$'
+# regex = r'^(Mr\.|Mrs\.|Ms\.|Dr\.|Er\.)[a-zA-Z]+$'
+# regex = r'^[a-zA-Z02468]{40}[13579\s]{5}'
+# regex = r'^[a-z|A-Z]*s$'
+# regex = r'^\d{2,}[a-z]*[A-Z]*$'
+# regex = r'.*?\(.+\).*' | regex = r'.*\(.*\).*'
+# regex = r'\b[A-Z]\w*\b'
+# regex = r'\b[A-Z]+\b'
+# regex = r'\b[aA][n]?\b'
+
+
+# import re 
+# for line in 'Some words contain the word cat: scat, ducati, alcatel, catalyst, worldcat and of course cat!'.split(): 
+#     if re.search(r"\Bcat\B", line, flags=0): 
+#         print(line, sep='\n')
 
 
 # regex = r'ca[rtb]'
