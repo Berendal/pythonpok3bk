@@ -1,3 +1,77 @@
+# import sys, re
+
+
+# data = [line.strip() for line in sys.stdin]
+# res = 0
+# for i in data:
+#     if re.search('(beegeek)', i, re.I):
+#         res += 1
+# print(res)
+
+
+# print(bool(re.search('^Здравствуйте|^Доброе утро|^Добрый день|^Добрый вечер', input(), re.I | re.M)))
+
+
+# data = [line.strip() for line in sys.stdin]
+# res = 0
+# for i in data:
+#     if re.search(r'^(beegeek).*(beegeek)$', i):
+#         res += 3
+#     elif re.search(r'^(beegeek)', i) or re.search(r'(beegeek)$', i):
+#         res += 2
+#     elif re.search(r'.*(beegeek).*', i):
+#         res += 1
+#     elif re.fullmatch(r'(beegeek)', i):
+#         res += 2
+# print(res)
+
+
+# data = [line.strip() for line in sys.stdin]
+# pat1 = r'(bee).*(bee)'
+# pat2 = r'\b(geek)\b'
+# bee = 0
+# geek = 0
+# for i in data:
+#     if re.search(pat1, i):
+#         bee += 1
+#     if re.search(pat2, i):
+#         geek += 1
+# print(bee, geek, sep='\n')
+
+
+# data = [line.strip() for line in sys.stdin]
+# pattern = r'\b(\w*)\1\b'
+# for i in data:
+#     if re.fullmatch(pattern, i.strip()):
+#         print(i.strip())
+# or
+# data = [line.strip() for line in sys.stdin]
+# pattern = r'\b(\w*)\1\b'
+# res = []
+# for i in data:
+#     match = re.search(pattern, i)
+#     res.append(match.group())
+# for i in res:
+#     if len(i) > 1:
+#         print(i)
+
+
+
+# data = [line.strip() for line in sys.stdin]
+# pattern = r'\_\d{1,}[a-zA-Z]{0,}\_?'
+
+# for i in data:
+#     print(True if re.fullmatch(pattern, i) else False)
+
+
+# data = [line.strip() for line in sys.stdin]
+# pattern = r'(\d{1,3})([- ])(\d{1,3})\2(\d{4,10})'
+
+# for i in data:
+#     match = re.search(pattern, i)
+#     print(f'Код страны: {match.group(1)}, Код города: {match.group(3)}, Номер: {match.group(4)}')
+
+
 # regex = r'\b(\w+)\s+\1\b'
 # regex = r'\d{2}((-|---|\.)?)(\d{2}\1){2}\d{2}'
 # regex = r'\d{2}(-?)(\d{2}\1){2}\d{2}'
