@@ -1,3 +1,41 @@
+# import re, sys
+
+
+# text = sys.stdin.read()
+# print(re.sub(r' *?""".*?""".*?\n|  #.*?$| *#.*?$\n', r'', text, flags=re.S | re.M))
+
+
+# print(re.sub(r"\b(\w+)(?:\W+\1\b)+", r"\1", fr'{input()}'))
+
+
+# s = input()
+
+# while '(' in s:
+#     regex = re.search(r'(\d+)\(([A-Za-z]+)\)', s)
+#     s = re.sub(re.escape(regex[0]), regex[2] * int(regex[1]), s, count=1)
+# print(s)
+
+
+# print(sub(r"\b(\w)(\w)(\w*)\b", r"\2\1\3", fr'{input()}'))
+
+
+# import keyword, re
+
+
+# string = input()
+# print(re.sub('|'.join(i for i in sorted(keyword.kwlist, reverse=True)), r'<kw>', string, flags=re.I))
+
+# from re import sub
+
+
+# def normalize_whitespace(string):
+#     return sub(r'\s+', r' ', string)
+
+
+# def normalize_jpeg(filename):
+#     return sub(r'\.\w{3,4}$',r'.jpg', filename)
+
+
 # import sys
 # from collections import defaultdict
 # from bs4 import BeautifulSoup
