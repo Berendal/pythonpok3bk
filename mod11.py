@@ -1,3 +1,23 @@
+# import re
+
+
+# a, b = input().split()
+# s = input()
+# regex_obj = re.compile(r'\d+')
+# res = (regex_obj.findall(s, pos=int(a), endpos=int(b)))
+# print(sum(int(i) for i in res))
+
+
+# def multiple_split(string, delimiters):
+#     return(re.split('|'.join(map(re.escape, delimiters)), string))
+
+
+# print(*re.split(r'\s*and\s*|\s*or\s*|\s*\|\s*|\s*&\s*', fr'{input()}'), sep=', ')
+
+
+# print(*re.split(r'\s*[.,;]\s*', fr'{input()}'))
+
+
 # import re, sys
 
 
